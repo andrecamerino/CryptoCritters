@@ -1,0 +1,50 @@
+[
+    {
+      "name": "Penny",
+      "animalType": "kiwi",
+      "endangerment": "Endangered",
+      "groupSize": 5,
+      "imageSource": "/animal_images/kiwi.png",
+      "habitat": "land"
+    },
+    {
+      "name": "Fluffy",
+      "animalType": "penguin",
+      "endangerment": "Vulnerable",
+      "groupSize": 10,
+      "imageSource": "/animal_images/penguin1.png",
+      "habitat": "sea"
+    },
+    {
+      "name": "Iceberg",
+      "animalType": "penguin2",
+      "endangerment": "Vulnerable",
+      "groupSize": 8,
+      "imageSource": "/animal_images/penguin2.png",
+      "habitat": "sea"
+    },
+    {
+      "name": "Splash",
+      "animalType": "seal",
+      "endangerment": "Least Concern",
+      "groupSize": 15,
+      "imageSource": "/animal_images/seal1.png",
+      "habitat": "sea"
+    },
+    {
+      "name": "Pebbles",
+      "animalType": "seal2",
+      "endangerment": "Least Concern",
+      "groupSize": 12,
+      "imageSource": "/animal_images/seal2.png",
+      "habitat": "sea"
+    },
+    {
+      "name": "Stick",
+      "animalType": "stick_insect",
+      "endangerment": "Least Concern",
+      "groupSize": 20,
+      "imageSource": "/animal_images/stick_insect.png",
+      "habitat": "land"
+    }
+  ]
