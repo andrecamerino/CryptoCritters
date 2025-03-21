@@ -1,0 +1,13 @@
+.footer {
+    /* outline: 1px solid red; */
+    background: transparent;
+    position: fixed;
+    bottom: 0;
+    width: 100%; /* Use 100% instead of fixed width */
+    height: 22vh;
+    z-index: 999;
+    padding: 20px; /* Remove margin to avoid layout issues */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
