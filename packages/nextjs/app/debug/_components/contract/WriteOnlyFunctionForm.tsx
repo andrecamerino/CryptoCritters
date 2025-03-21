@@ -13,7 +13,7 @@ import {
   getParsedContractFunctionArgs,
   transformAbiFunction,
 } from "~~/app/debug/_components/contract";
-import { IntegerInput } from "~~/components/scaffold-eth";
+import { IntegerInput } from "~~/oldComponents /scaffold-eth";
 import { useTransactor } from "~~/hooks/scaffold-eth";
 import { useTargetNetwork } from "~~/hooks/scaffold-eth/useTargetNetwork";
 import { simulateContractWriteAndNotifyError } from "~~/utils/scaffold-eth/contract";
