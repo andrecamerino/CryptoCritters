@@ -3,5 +3,9 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    width: 100vw;
-}
+    width: 100vw; /* Ensure the width takes up the full viewport */
+    background-image: url('/island_background.jpeg');
+    background-size: cover; /* This makes the image cover the entire screen */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents repeating the image */
+  }
