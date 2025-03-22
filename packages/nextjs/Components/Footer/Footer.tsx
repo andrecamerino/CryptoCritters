@@ -7,8 +7,9 @@ const Footer = () => {
   return (
     <div className="footer">
       <div>
-      <Button label="Play!" href="/EggStore/EggStore" />
+      <Button label="Eggs" href="/EggStore/EggStore" />
       </div>
+      <Button label="Coins" href="/Purchase/Purchase" />
       <div className="mt-10 z-20 relative">{<Tablet />}</div>
       <div>
       <Button label="Play!" href="https://example.com" />

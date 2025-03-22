@@ -1,0 +1,115 @@
+body {
+    background-image: url('/coin_images/coin4.jpg'); /* Set a background color for the body */
+    margin: 0;
+    padding: 0;
+    font-family: 'Press Start 2P', cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ensure the body takes the full height of the viewport */
+  }
+  
+  .purchase-container {
+    font-family: 'Press Start 2P', cursive;
+    background-color: #fff;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh; /* Make the container smaller */
+    width: 100%; /* Adjust the width */
+    max-width: 1000px; /* Set a max width */
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border: 4px solid #000; /* Add a pixel-like border */
+  }
+  
+  h1 {
+    font-size: 40px;
+    color: #ffcc00;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 0px #414141;
+  }
+  
+  .coin-options-container {
+    display: flex;
+    flex-wrap: nowrap; /* Prevent wrapping */
+    gap: 20px; /* Space between items */
+    max-width: 900px;
+    width: 100%; /* Ensure full width */
+    margin-bottom: 30px;
+    justify-content: center; /* Center the content */
+  }
+  
+  .coin-option {
+    flex: 0 1 200px; /* Prevent the items from growing too large */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    max-width: 200px; /* Prevent content from expanding too wide */
+    border: 4px solid #000; /* Add a pixel-like border */
+    font-family: 'Press Start 2P', cursive; /* Set pixel font */
+  }
+  
+  .coin-option:hover {
+    transform: scale(1.05);
+  }
+  
+  .coin-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .coin-label {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #5e5e5e;
+    text-align: center;
+  }
+  
+  .purchase-button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #ffb641;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Press Start 2P', cursive; /* Set pixel font */
+  }
+  
+  .purchase-button:hover {
+    background-color: #ff8000;
+  }
+  
+  .result {
+    margin-top: 30px;
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+  }
+  
+  .result h3 {
+    color: #ffcc00;
+    margin-bottom: 10px;
+  }
+  
+  .result p {
+    font-size: 30px;
+    color: #5e5e5e;
+    font-weight: bold;
+  }
