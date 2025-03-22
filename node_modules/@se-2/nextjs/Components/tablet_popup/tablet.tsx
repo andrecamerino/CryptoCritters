@@ -24,12 +24,9 @@ const Popup: React.FC = () => {
     <div className="button-container">
       {/* ImageButton to open the main popup - Hidden when popup is open */}
       {!isOpen && (
-        <ImageButton
-          imageSrc="/dexbtn.png" // Replace with the icon you want for the button
-          href="#"
-          altText="Critterdex"
-          onClick={() => setIsOpen(true)} // Open popup when clicked
-        />
+        <div onClick={() => setIsOpen(true)} className="cursor-pointer">
+        <ImageButton imageSrc="/dexbtn.png" altText="Critterdex" />
+      </div>
       )}
 
       {/* Main Popup with Image Gallery */}
