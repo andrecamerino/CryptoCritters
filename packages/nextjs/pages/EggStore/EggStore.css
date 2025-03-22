@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+html,
+body {
+    margin: 0;
+    height: 100%;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.header {
+    z-index: 999;
+}
+
+.egg-store {
+    position: relative;
+    background-image: url('/bookshelf_background.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+}
+
+.egg-store::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.egg-container {
+    /* outline: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px; /* Reduce gap between elements */
+}
+
+.egg-rarity {
+    font-size: 48px; /* Slightly smaller font */
+    color: yellow;
+    text-transform: uppercase;
+    margin-bottom: 5px; /* Reduce margin */
+}
+
+.egg-price {
+    font-size: 32px;
+    color: white;
+    margin-top: 5px; /* Reduce margin */
+}
+
+.eggs {
+    width: 100vw;
+    position: absolute;
+    bottom: 20%;
+    display: grid;
+    grid-template-columns: 5fr 1fr 5fr;
+    justify-content: center;
+    z-index: 2;
+}
+
+.egg {
+    cursor: pointer;
+    width: 500px; /* Slightly smaller eggs */
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.egg:hover {
+    transform: scale(1.1);
+}
+
+.egg img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.egg-table {
+    position: relative;
+    padding-bottom: 15px;
+    transform: translate(1%, 47%);
+    z-index: 1;
+}
+
+.selected-animal {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-size: large;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 0 40px 30px;
+    min-height: 180px;
+    width: 500px;
+    z-index: 3;
+    color: black;
+    text-align: left;
+    position: fixed;
+}
+
+.selected-animal p {
+    margin: 20px 0;
+}
+
+
+.selected-animal img {
+    display: block;
+    margin: 0 auto;
+}
+
+/* Apply black filter while rolling */
+.blackout {
+    filter: brightness(0);
+    /* Makes the image fully black */
+    transition: filter 0.2s ease-in-out;
+}
+
+/* Reveal the final image */
+.reveal {
+    filter: brightness(1);
+    /* Removes the black filter */
+    transition: filter 0.5s ease-in-out;
+}
+
+/* Close Button with 8-bit style */
+.close-button {
+  background: #92CD41; /* First color */
+  display: flex;
+  position: relative;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px; /* Adjusted for better fit */
+  padding: 15px;
+  font-family: 'Press Start 2P', cursive;
+  text-decoration: none; 
+  color: white;
+  box-shadow: inset -4px -4px 0px 0px #4AA52E; /* Shadow */
+  width: 100%;
+  cursor: pointer;
+  transition: background 0.3s, box-shadow 0.3s;
+  border: none;
+  /* margin: 20px; */
+
+  /* Hover effect */
+  &:hover,
+  &:focus {
+    background: #76c442;
+    box-shadow: inset -6px -6px 0px 0px #4AA52E;
+  }
+
+  /* Active effect */
+  &:active {
+    box-shadow: inset 4px 4px 0px 0px #4AA52E;
+  }
+
+  /* Outline styling */
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    box-sizing: content-box;
+  }
+
+  /* Top and bottom borders */
+  &:before {
+    top: -6px;
+    left: 0;
+    border-top: 6px solid black;
+    border-bottom: 6px solid black;
+  }
+
+  /* Left and right borders */
+  &:after {
+    left: -6px;
+    top: 0;
+    border-left: 6px solid black;
+    border-right: 6px solid black;
+  }
+}
+
+.endangerment.green {
+    color: green;
+  }
+  
+  .endangerment.yellow {
+    color: orange;
+  }
+  
+  .endangerment.red {
+    color: red;
+  }

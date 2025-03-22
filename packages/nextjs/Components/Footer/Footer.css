@@ -6,7 +6,7 @@
     width: 100%; /* Use 100% instead of fixed width */
     height: 17vh;
     z-index: 999;
-    padding: 20px; /* Remove margin to avoid layout issues */
+    padding: 20px; /* Padding is maintained */
     display: flex;
     justify-content: space-between;
     align-items: center;

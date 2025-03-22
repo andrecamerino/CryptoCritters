@@ -6,15 +6,10 @@ import "./Footer.css";
 const Footer = () => {
   return (
     <div className="footer">
-      <div>
-      <Button label="Eggs" href="/EggStore/EggStore" />
-      </div>
-      <Button label="Coins" href="/Purchase/Purchase" />
-      <div className="mt-10 z-20 relative">{<Tablet />}</div>
-      <div>
+      <Button label="Play!" href="/EggStore/EggStore" />
+      <div className="border border-black-500 mt-10">{/* <Tablet /> */}</div>
       <Button label="Play!" href="https://example.com" />
       
-      </div>
     </div>
   );
 };
