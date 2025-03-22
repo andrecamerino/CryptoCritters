@@ -1,17 +1,17 @@
-import React from 'react'
-import Main from './main/pages/Main/Main'
-import '../styles/globals.css'
+import React from "react";
+import Main from "../pages/Index/Index";
+import "../styles/globals.css";
 
 export const layout = () => {
   return (
     <>
       <html>
         <body>
-          <Main/>
+          <Main />
         </body>
       </html>
     </>
-  )
-}
+  );
+};
 
-export default layout
+export default layout;

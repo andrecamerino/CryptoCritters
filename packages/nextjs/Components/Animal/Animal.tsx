@@ -1,9 +1,12 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import "./Animal.css"; // Assuming styles are defined here
-import animalsData from "../../../data/animals.json"; // Adjust path if needed
+// Assuming styles are defined here
+import animalsData from "../../app/data/animals.json";
+import "./Animal.css";
+
+// Adjust path if needed
 
 const Animal = () => {
   const [animals, setAnimals] = useState<any[]>([]);
@@ -57,7 +60,7 @@ const Animal = () => {
 
   return (
     <div className="animal-container">
-      {animals.map((animal) => {
+      {animals.map(animal => {
         const randomTop = Math.random() * (boundary.topMax - boundary.topMin) + boundary.topMin; // Random vertical position
         const randomLeft = Math.random() * (boundary.leftMax - boundary.leftMin) + boundary.leftMin; // Random horizontal position
 
@@ -77,12 +80,7 @@ const Animal = () => {
               ...getRandomAnimation(), // Apply random animation speed, direction, and translation
             }}
           >
-            <Image
-              src={animal.imageSource}
-              alt={animal.animalType}
-              width={150}
-              height={150}
-            />
+            <Image src={animal.imageSource} alt={animal.animalType} width={150} height={150} />
             <div className="animal-info">
               <h3>{animal.name}</h3>
               <p>Type: {animal.animalType}</p>
