@@ -1,11 +1,11 @@
 "use client";
 
 import React from "react";
-import Button from "../Button/Button";
-import Cloud from "../Cloud/Cloud";
-import Footer from "../Footer/Footer";
-import Header from "../Header/Header";
-import Animal from "../Animal/Animal";
+import Animal from "../../Components/Animal/Animal";
+import Button from "../../Components/Button/Button";
+import Cloud from "../../Components/Cloud/Cloud";
+import Footer from "../../Components/Footer/Footer";
+import Header from "../../Components/Header/Header";
 import "./Home.css";
 
 const Home: React.FC = () => {
