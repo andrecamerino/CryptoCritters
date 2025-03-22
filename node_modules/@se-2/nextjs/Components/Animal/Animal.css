@@ -1,0 +1,58 @@
+.animal-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    /* Prevents animals from running off the page */
+}
+
+.animal {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: moveAnimal 50s linear infinite;
+    /* Slow down movement */
+}
+
+.animal-info {
+    position: absolute;
+    top: -30px;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    display: none;
+}
+
+.animal:hover .animal-info {
+    display: block;
+}
+
+@keyframes moveAnimal {
+    0% {
+        transform: translate(0, 0);
+        /* Start at initial position */
+    }
+
+    25% {
+        transform: translate(15vw, -15vh);
+        /* Random movement within a safe area */
+    }
+
+    50% {
+        transform: translate(-10vw, 10vh);
+        /* Keep animals within a smaller area */
+    }
+
+    75% {
+        transform: translate(5vw, -5vh);
+        /* More random movement */
+    }
+
+    100% {
+        transform: translate(0, 0);
+        /* Return to initial position */
+    }
+}
