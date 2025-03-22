@@ -4,9 +4,9 @@ import './play.css';
 import ExitButton from '~~/Components/ExitButton/ExitButton';
 
 const games = [
-  { title: 'Critter Run', slug: 'tic-tac-toe', img: '/lock.jpg' },
-  { title: 'Critter Scavenge', slug: 'memory-match', img: '/scavenge.png' },
-  { title: 'Crossy Critters', slug: 'snake', img: '/lock.jpg' },
+  { title: 'Critter Run', slug: 'tic-tac-toe', img: '/lock.jpg', gamePage: '' },
+  { title: 'Critter Scavenge', slug: 'memory-match', img: '/scavenge.png', gamePage: '/Scavenger/Scavenger'  },
+  { title: 'Crossy Critters', slug: 'snake', img: '/lock.jpg', gamePage: '' },
 ];
 
 const Play = () => {
@@ -18,7 +18,7 @@ const Play = () => {
       <h1 className="page-header">Choose a Minigame</h1>
       <div className="games-grid-page">
         {games.map((game, index) => (
-          <Link key={index} href={`/games/${game.slug}`} passHref>
+          <Link key={index} href={game.gamePage} passHref>
             <div className="game-card-page">
               <Image
                 src={game.img}
