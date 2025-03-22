@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
-
 .eight-bit-button {
   background: #92CD41; /* First color */
   display: flex;
@@ -7,26 +6,26 @@
   text-align: center;
   align-items: center;
   justify-content: center;
-  font-size: 30px;
-  padding: 20px;
+  font-size: 20px; /* Adjust font size for balance */
+  width: 250px; /* Set a fixed width */
+  height: 100px; /* Same as width to make it square */
   font-family: 'Press Start 2P', cursive;
   text-decoration: none; 
   color: white;
-  box-shadow: inset -4px -4px 0px 0px #4AA52E; /* Shadow with green color */
-  height: 100%;
-
+  box-shadow: inset -4px -4px 0px 0px #4AA52E; /* Shadow */
+  
   transition: background 0.3s, box-shadow 0.3s;
 
   /* Hover effect */
   &:hover,
   &:focus {
-    background: #76c442; /* Second color */
-    box-shadow: inset -6px -6px 0px 0px #4AA52E; /* Shadow with green color */
+    background: #76c442;
+    box-shadow: inset -6px -6px 0px 0px #4AA52E;
   }
 
   /* Active effect */
   &:active {
-    box-shadow: inset 4px 4px 0px 0px #4AA52E; /* Shadow with green color */
+    box-shadow: inset 4px 4px 0px 0px #4AA52E;
   }
 
   /* Outline styling */

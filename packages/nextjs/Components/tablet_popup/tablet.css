@@ -1,43 +1,46 @@
 .critterdex-button {
-    background: #92CD41; /* First color */
-    display: flex;
-    position: absolute;
-    bottom: 40px;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    font-size: 30px;
-    padding: 20px;
-    font-family: 'Press Start 2P', cursive;
-    text-decoration: none; 
-    color: white;
-    box-shadow: inset -4px -4px 0px 0px #4AA52E; /* Inner shadow */
-    height: auto;
-    width: auto;
-    border: 6px solid black; /* Explicit black border */
-    outline: none !important; /* Remove any outline */
-    background-clip: padding-box; /* Ensures the background does not extend into the border */
-    transition: background 0.3s, box-shadow 0.3s;
+  background: #92CD41; /* First color */
+  display: flex;
+  position: absolute;
+  bottom: 45px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px; /* Adjusted for balance */
+  font-family: 'Press Start 2P', cursive;
+  text-decoration: none; 
+  color: white;
   
-    /* Hover effect */
-    &:hover,
-    &:focus {
-      background: #76c442; /* Second color */
+  width: 250px; /* Square shape */
+  height: 120px; /* Same as width */
+  padding: 0; /* Ensures no extra space */
+
+  box-shadow: inset -4px -4px 0px 0px #4AA52E; /* Inner shadow */
+  border: 6px solid black; /* Pixelated border */
+  outline: none !important;
+  background-clip: padding-box;
+
+  transition: background 0.3s, box-shadow 0.3s;
+
+  /* Hover effect */
+  &:hover,
+  &:focus {
+      background: #76c442;
       box-shadow: inset -6px -6px 0px 0px #4AA52E;
-    }
-  
-    /* Active effect */
-    &:active {
-      box-shadow: inset 4px 4px 0px 0px #4AA52E;
-    }
-  
-    /* Remove pseudo-elements */
-    &:before,
-    &:after {
-      display: none !important;
-      content: none !important;
-    }
   }
+
+  /* Active effect */
+  &:active {
+      box-shadow: inset 4px 4px 0px 0px #4AA52E;
+  }
+
+  /* Removes unwanted pseudo-elements */
+  &:before,
+  &:after {
+      display: none !important;
+  }
+}
+
   
   .button-container {
     outline: none;
