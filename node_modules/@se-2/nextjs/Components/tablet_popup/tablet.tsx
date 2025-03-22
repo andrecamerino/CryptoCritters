@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import ImageButton from "../Image_button/Image_button"; // Import your ImageButton component
 import "./tablet.css";
 
 const Popup: React.FC = () => {
@@ -21,14 +22,14 @@ const Popup: React.FC = () => {
 
   return (
     <div className="button-container">
-      {/* Button to open main popup - Hidden when popup is open */}
+      {/* ImageButton to open the main popup - Hidden when popup is open */}
       {!isOpen && (
-        <button
-          className="critterdex-button"
-          onClick={() => setIsOpen(true)}
-        >
-          Critterdex
-        </button>
+        <ImageButton
+          imageSrc="/dexbtn.png" // Replace with the icon you want for the button
+          href="#"
+          altText="Critterdex"
+          onClick={() => setIsOpen(true)} // Open popup when clicked
+        />
       )}
 
       {/* Main Popup with Image Gallery */}

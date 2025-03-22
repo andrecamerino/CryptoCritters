@@ -1,18 +1,34 @@
 .footer {
-    /* outline: 1px solid red; */
     background: transparent;
     position: fixed;
     bottom: 0;
-    width: 100%; /* Use 100% instead of fixed width */
-    height: 17vh;
+    width: 100%;
+    height: 23vh;
     z-index: 999;
-    padding: 20px; /* Padding is maintained */
+    padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.footer button{
-    position: relative;
-    z-index: 10;
-}
+  }
+  
+  .footer > div {
+    display: flex;
+    align-items: center;
+  }
+  
+  .footer > div:not(:last-child) {
+    margin-right: 20px; /* Adjust the space between button groups */
+  }
+  
+  .button-group-left {
+    gap: 10px; /* Space between eggs and coins */
+  }
+  
+  .button-group-right {
+    gap: 10px; /* Space between tablet and play */
+  }
+  
+  .footer > div:nth-child(3) {
+    margin-left: 350px; /* Adjust the space between the second and third button */
+  }
+  
