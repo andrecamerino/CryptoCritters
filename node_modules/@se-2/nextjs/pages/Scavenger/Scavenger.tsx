@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import "./Scavenger.css"; // Import normal CSS file
+import "./Scavenger.css";
 import ExitButton from "~~/Components/ExitButton/ExitButton";
-import Link from "next/link"; // Import Link from Next.js
+import Link from "next/link";
 
 const GRID_SIZE = 9;
 
@@ -13,6 +13,19 @@ const Scavenger: React.FC = () => {
   const [message, setMessage] = useState<string>("");
   const [popupMessage, setPopupMessage] = useState<string>("");
   const [showPopup, setShowPopup] = useState<boolean>(false);
+
+  useEffect(() => {
+    // Play background music
+    const audio = new Audio("/scavenge.mp3"); // Update with the correct path
+    audio.loop = true;
+    audio.volume = 0.5;
+    audio.play().catch((error) => console.log("Autoplay failed:", error));
+
+    return () => {
+      audio.pause();
+      audio.currentTime = 0;
+    };
+  }, []);
 
   const placeItems = (): Array<"berry" | "wolf" | ""> => {
     let items: Array<"berry" | "wolf" | ""> = new Array(GRID_SIZE).fill("");
@@ -76,7 +89,7 @@ const Scavenger: React.FC = () => {
 
   return (
     <div>
-      <ExitButton label='Exit' href='/' />
+      <ExitButton label="Exit" href="/" />
       <div className="game-container">
         <h1>Scavenger Game</h1>
         <div className="grid">
