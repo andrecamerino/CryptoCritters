@@ -6,7 +6,7 @@ import "./Footer.css";
 const Footer = () => {
   return (
     <div className="footer">
-      <Button label="Play!" href="/EggStore/EggStore" />
+      <Button label="Egg Store" href="/EggStore/EggStore" />
       <div className="border border-black-500 mt-10">{/* <Tablet /> */}</div>
       <Button label="Play!" href="https://example.com" />
     </div>
