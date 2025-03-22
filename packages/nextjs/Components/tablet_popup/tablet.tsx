@@ -42,24 +42,28 @@ const Popup: React.FC = () => {
             onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside
           >
             <h2 className="text-2xl text-black font-bold mb-4">Welcome to the Critterdex</h2>
-            <p className="text-lg text-black mb-4">Click an image to view it in detail</p>
+            <p className="text-lg text-black mb-4">Click a Critter to view it in detail</p>
 
             {/* Image Gallery */}
             <div className="grid grid-cols-5 gap-4">
               {images.map((img, index) => (
-                <img
+                <div
                   key={index}
-                  src={img}
-                  alt={`Critter ${index + 1}`}
-                  className="w-24 h-24 object-cover cursor-pointer border-2 border-gray-300 hover:border-blue-500"
-                  onClick={() => setSelectedImage(img)}
-                />
+                  className="hover-large w-48 h-48 overflow-hidden cursor-pointer transform transition-all duration-300 hover:scale-105"
+                >
+                  <img
+                    src={img}
+                    alt={`Critter ${index + 1}`}
+                    className="w-full h-full object-cover transform transition-all duration-300 hover:scale-105"
+                    onClick={() => setSelectedImage(img)}
+                  />
+                </div>
               ))}
             </div>
 
             {/* Close Button */}
             <button
-              className="text-red-500 text-xl float-right mt-4"
+              className="x-hover text-red-500 text-xl float-right mt-4"
               onClick={() => setIsOpen(false)}
             >
               &times;
@@ -80,7 +84,7 @@ const Popup: React.FC = () => {
           >
             <img src={selectedImage} alt="Selected Critter" className="max-w-[700px] max-h-[700px] w-auto h-auto" />
             <button
-              className="text-red-500 text-xl float-right mt-4"
+              className="text-red-500 text-xl float-right mt-4 x-hover"
               onClick={() => setSelectedImage(null)}
             >
               &times;
