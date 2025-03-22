@@ -10,7 +10,7 @@ interface ImageButtonProps {
 
 const ImageButton: React.FC<ImageButtonProps> = ({ imageSrc, href, altText, className }) => {
   return (
-    <a href={href} className={`button-image ${className}`}> {/* Apply className */}
+    <a href={href} className={`button-image ${className}`}>
       <img src={imageSrc} alt={altText} />
     </a>
   );

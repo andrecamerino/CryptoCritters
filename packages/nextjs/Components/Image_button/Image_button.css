@@ -6,14 +6,17 @@
   height: auto;
   border: 4px solid black;
   box-shadow: inset -3px -3px 0px 0px #4AA52E;
-  transition: background 0.3s, box-shadow 0.3s;
+  transition: box-shadow 0.3s ease, transform 0.3s ease; /* Add transition to scale */
+  text-decoration: none; /* Remove default link underline */
+  overflow: hidden; /* Prevent image overflow */
 }
 
-.button-image:hover,
-.button-image:focus {
+.button-image:hover {
   box-shadow: inset -6px -6px 0px 0px #4AA52E;
+  transform: scale(1.1); /* Scale the container */
 }
 
+/* Active state */
 .button-image:active {
   box-shadow: inset 4px 4px 0px 0px #4AA52E;
 }
@@ -25,6 +28,7 @@
   width: 100%;
   height: 100%;
   box-sizing: content-box;
+  z-index: -1; /* Ensure borders are behind image */
 }
 
 .button-image:before {
@@ -41,10 +45,15 @@
   border-right: 6px solid black;
 }
 
+/* Image styling */
 .button-image img {
   width: 100%;
   height: auto;
   display: block;
-  border-radius: 5px;
+  pointer-events: none; /* Ensure image doesn't block hover */
+  transition: transform 0.3s ease; /* Smooth transition for image scaling */
+  
+  /* Set max width and height for the image */
+  max-width: 100%; /* Ensure the image never exceeds the container's width */
+  max-height: 160px; /* Set maximum height for the image */
 }
-
