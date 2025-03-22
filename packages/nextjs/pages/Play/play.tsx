@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import './play.css';
+import ExitButton from '~~/Components/ExitButton/ExitButton';
 
 const games = [
   { title: 'Critter Run', slug: 'tic-tac-toe', img: '/lock.jpg' },
@@ -12,7 +13,7 @@ const Play = () => {
   return (
     <div className="play-container-page">
       {/* Exit Button */}
-      <button className="exit-button-page">X</button>
+      <ExitButton label='Exit' href='/' />
       
       <h1 className="page-header">Choose a Minigame</h1>
       <div className="games-grid-page">
