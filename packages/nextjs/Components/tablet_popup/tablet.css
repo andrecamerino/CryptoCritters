@@ -11,7 +11,7 @@
   text-decoration: none; 
   color: white;
   
-  width: 400px; /* Square shape */
+  width: 250px; /* Square shape */
   height: 120px; /* Same as width */
   padding: 0; /* Ensures no extra space */
 
@@ -21,35 +21,31 @@
   background-clip: padding-box;
 
   transition: background 0.3s, box-shadow 0.3s;
+
+  /* Hover effect */
+  &:hover,
+  &:focus {
+      background: #76c442;
+      box-shadow: inset -6px -6px 0px 0px #4AA52E;
+  }
+
+  /* Active effect */
+  &:active {
+      box-shadow: inset 4px 4px 0px 0px #4AA52E;
+  }
+
+  /* Removes unwanted pseudo-elements */
+  &:before,
+  &:after {
+      display: none !important;
+  }
 }
 
-.critterdex-button:hover,
-.critterdex-button:focus {
-  background: #76c442;
-  box-shadow: inset -6px -6px 0px 0px #4AA52E;
-}
-
-.critterdex-button:active {
-  box-shadow: inset 4px 4px 0px 0px #4AA52E;
-}
-
-.critterdex-button:before,
-.critterdex-button:after {
-  display: none !important;
-}
-
-.button-container {
-  outline: none;
-  border: none;
-  background: transparent;
-  box-shadow: none;
-  background: transparent;
-}
-
-.hover-large:hover {
-  transform: scale(1.1);
-}
-
-.x-hover:hover {
-  transform: scale(1.5);
-}
+  
+  .button-container {
+    outline: none;
+    border: none;
+    background: transparent;
+    box-shadow: none;
+    background: transparent;
+  }

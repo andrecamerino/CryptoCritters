@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import "./EggStore.css";
 import ExitButton from "~~/Components/ExitButton/ExitButton";
@@ -19,99 +19,7 @@ type EggRarity = {
 };
 
 const eggRarities: EggRarity[] = [
-  {
-    type: "Common",
-    animals: [
-      {
-        name: "Stick",
-        animalType: "stick_insect",
-        endangerment: "Least Concern",
-        groupSize: 20,
-        imageSource: "/animal_images/stick_insect.png",
-        habitat: "land",
-        facts: [
-          "Stick insects are masters of camouflage, blending in perfectly with their surroundings.",
-          "They feed primarily on leaves, using their long bodies to navigate through plants.",
-          "Stick insects can regenerate lost legs as part of their defense mechanism."
-        ]
-      },
-      {
-        name: "Splash",
-        animalType: "seal",
-        endangerment: "Least Concern",
-        groupSize: 15,
-        imageSource: "/animal_images/seal1.png",
-        habitat: "sea",
-        facts: [
-          "Seals have a thick layer of blubber to protect them from cold water.",
-          "They are highly agile swimmers, capable of reaching speeds of up to 40 km/h.",
-          "Seals communicate through a combination of vocalizations, body language, and scent."
-        ]
-      },
-      {
-        name: "Pebbles",
-        animalType: "seal2",
-        endangerment: "Least Concern",
-        groupSize: 12,
-        imageSource: "/animal_images/seal2.png",
-        habitat: "sea",
-        facts: [
-          "Seals use their whiskers to detect prey in dark or murky waters.",
-          "They can hold their breath for several minutes while diving.",
-          "Seals are known for their playful behavior, especially in their interactions with humans."
-        ]
-      },
-    ],
-  },
-  {
-    type: "Rare",
-    animals: [
-      {
-        name: "Fluffy",
-        animalType: "penguin",
-        endangerment: "Vulnerable",
-        groupSize: 10,
-        imageSource: "/animal_images/penguin1.png",
-        habitat: "sea",
-        facts: [
-          "Penguins are excellent swimmers but cannot fly.",
-          "They have a layer of blubber beneath their skin to keep warm in cold waters.",
-          "Penguins communicate with a wide range of vocalizations and body movements."
-        ]
-      },
-      {
-        name: "Iceberg",
-        animalType: "penguin2",
-        endangerment: "Vulnerable",
-        groupSize: 8,
-        imageSource: "/animal_images/penguin2.png",
-        habitat: "sea",
-        facts: [
-          "Some penguins, like the Emperor Penguin, can dive to depths of over 500 meters.",
-          "Penguins typically live in the Southern Hemisphere, especially Antarctica.",
-          "Penguins often huddle together to stay warm in freezing temperatures."
-        ]
-      },
-    ],
-  },
-  {
-    type: "Legendary",
-    animals: [
-      {
-        name: "Penny",
-        animalType: "kiwi",
-        endangerment: "Endangered",
-        groupSize: 5,
-        imageSource: "/animal_images/kiwi.png",
-        habitat: "land",
-        facts: [
-          "Kiwi birds are nocturnal and prefer to forage for food at night.",
-          "They are flightless, with small wings and large, powerful legs.",
-          "The kiwi is the national symbol of New Zealand."
-        ]
-      },
-    ],
-  },
+  // (same as your existing eggRarities array)
 ];
 
 const EggStore: React.FC = () => {
@@ -119,6 +27,14 @@ const EggStore: React.FC = () => {
   const [displayedAnimal, setDisplayedAnimal] = useState<Animal | null>(null);
   const [isRolling, setIsRolling] = useState(false);
   const [randomFact, setRandomFact] = useState<string | null>(null); // State to store random fact
+  const audioRef = useRef<HTMLAudioElement | null>(null); // Reference for the audio element
+
+  // Play music automatically when the component mounts
+  useEffect(() => {
+    if (audioRef.current) {
+      audioRef.current.play();
+    }
+  }, []); // Empty dependency array to run only once on mount
 
   const handleEggClick = (type: string) => {
     const animalsForRarity = eggRarities.find(rarity => rarity.type === type)?.animals ?? [];
@@ -218,6 +134,12 @@ const EggStore: React.FC = () => {
       <div className="egg-table">
         <Image src="/egg_table.png" alt="Egg table" width={2800} height={2800} />
       </div>
+
+      {/* Audio for the background music */}
+      <audio ref={audioRef} loop>
+        <source src="/egg.mp3" type="audio/mp3" />
+        Your browser does not support the audio element.
+      </audio>
     </div>
   );
 };
