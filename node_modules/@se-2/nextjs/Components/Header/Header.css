@@ -6,11 +6,95 @@
     height: 16vh; /* 16% of viewport height */
     z-index: 999;
     display: flex; /* Flexbox for centering */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.logo-section {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.wallet-section {
+    margin-right: auto;
 }
 
 .header img {
     max-height: 80%; /* Ensure image doesn't overflow */
     width: auto; /* Keep aspect ratio */
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.header-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.header-image {
+    max-height: 80%;
+    width: auto;
+    object-fit: contain;
+}
+
+.wallet-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+}
+
+.profile-name {
+    font-weight: 600;
+    color: #212529;
+    font-size: 1rem;
+}
+
+.wallet-address {
+    font-family: monospace;
+    color: #6c757d;
+    font-size: 0.9rem;
+    background-color: #e9ecef;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.25rem;
+}
+
+.not-connected {
+    color: #6c757d;
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+    background-color: #f8f9fa;
+    border-radius: 0.5rem;
+    border: 1px solid #dee2e6;
+}
+
+.connect-button {
+    background-color: #007bff;
+    color: white;
+    border: 5px solid #000;
+    padding: 0.5rem 1rem;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+
+.connect-button:hover {
+    background-color: #0056b3;
 }
