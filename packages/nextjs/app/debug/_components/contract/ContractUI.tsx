@@ -5,9 +5,9 @@ import { useReducer } from "react";
 import { ContractReadMethods } from "./ContractReadMethods";
 import { ContractVariables } from "./ContractVariables";
 import { ContractWriteMethods } from "./ContractWriteMethods";
-import { Address, Balance } from "~~/oldComponents /scaffold-eth";
 import { useDeployedContractInfo, useNetworkColor } from "~~/hooks/scaffold-eth";
 import { useTargetNetwork } from "~~/hooks/scaffold-eth/useTargetNetwork";
+import { Address, Balance } from "~~/oldComponents/scaffold-eth";
 import { ContractName } from "~~/utils/scaffold-eth/contract";
 
 type ContractUIProps = {

@@ -5,8 +5,8 @@ import { AddressLinkWrapper } from "./AddressLinkWrapper";
 import { Address as AddressType, getAddress, isAddress } from "viem";
 import { normalize } from "viem/ens";
 import { useEnsAvatar, useEnsName } from "wagmi";
-import { BlockieAvatar } from "~~/oldComponents /scaffold-eth";
 import { useTargetNetwork } from "~~/hooks/scaffold-eth/useTargetNetwork";
+import { BlockieAvatar } from "~~/oldComponents/scaffold-eth";
 import { getBlockExplorerAddressLink } from "~~/utils/scaffold-eth";
 
 const textSizeMap = {

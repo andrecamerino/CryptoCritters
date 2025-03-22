@@ -7,10 +7,10 @@ import { AppProgressBar as ProgressBar } from "next-nprogress-bar";
 import { useTheme } from "next-themes";
 import { Toaster } from "react-hot-toast";
 import { WagmiProvider } from "wagmi";
-import { Footer } from "~~/oldComponents /Footer";
-import { Header } from "~~/oldComponents /Header";
-import { BlockieAvatar } from "~~/oldComponents /scaffold-eth";
 import { useInitializeNativeCurrencyPrice } from "~~/hooks/scaffold-eth";
+import { Footer } from "~~/oldComponents/Footer";
+import { Header } from "~~/oldComponents/Header";
+import { BlockieAvatar } from "~~/oldComponents/scaffold-eth";
 import { wagmiConfig } from "~~/services/web3/wagmiConfig";
 
 const ScaffoldEthApp = ({ children }: { children: React.ReactNode }) => {
