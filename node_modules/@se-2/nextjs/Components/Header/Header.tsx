@@ -9,8 +9,21 @@ const Header = () => {
   const [coinBalance, setCoinBalance] = useState<number>(0);
 
   useEffect(() => {
+    // Check for previously connected wallet
+    const wasConnected = localStorage.getItem('walletConnected');
+    if (wasConnected === 'true') {
+      connect();
+    }
+  }, [connect]);
+
+  useEffect(() => {
     if (signer) {
-      signer.getAddress().then(addr => setAddress(addr));
+      signer.getAddress().then(addr => {
+        setAddress(addr);
+        localStorage.setItem('walletConnected', 'true');
+      });
+    } else {
+      localStorage.removeItem('walletConnected');
     }
   }, [signer]);
 
