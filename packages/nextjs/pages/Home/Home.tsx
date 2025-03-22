@@ -3,6 +3,7 @@
 import React, { useEffect, useRef } from "react";
 import Animal from "../../Components/Animal/Animal";
 import Button from "../../Components/Button/Button";
+import ImageButton from "~~/Components/Image_button/Image_button";
 import Cloud from "../../Components/Cloud/Cloud";
 import Footer from "../../Components/Footer/Footer";
 import Header from "../../Components/Header/Header";

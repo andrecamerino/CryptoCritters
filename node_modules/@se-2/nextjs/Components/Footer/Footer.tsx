@@ -1,20 +1,37 @@
 import React from "react";
-import Button from "../Button/Button";
+import ImageButton from "../Image_button/Image_button"; // Import the ImageButton component
 import Tablet from "../tablet_popup/tablet";
-import "./Footer.css";
+import "./Footer.css"; // Ensure this path is correct
 
 const Footer = () => {
   return (
     <div className="footer">
       <div>
-        <Button label="Eggs" href="/EggStore/EggStore" />
+        <ImageButton
+          imageSrc="/eggbtn.png"
+          href="/EggStore/EggStore"
+          altText="Eggs"
+          className="egg-store-btn"  // Add a custom class here
+        />
       </div>
-      <Button label="Coins" href="/Purchase/Purchase" />
-      <div className="mt-10 z-20 relative">
+      <div>
+        <ImageButton
+          imageSrc="/coinbtn.png"
+          href="/Purchase/Purchase"
+          altText="Coins"
+        />
+      </div>
+      
+      <div>
         <Tablet />
       </div>
       <div>
-        <Button label="Play!" href="/Play/play" />
+        <ImageButton
+          imageSrc="/playbtn.png"
+          href="/Play/play"
+          altText="Play!"
+          className="play-btn"  // Add a custom class here
+        />
       </div>
     </div>
   );
