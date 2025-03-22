@@ -13,10 +13,20 @@ export function usePaymentContract(contractAddress: string) {
       if (typeof window !== "undefined" && window.ethereum) {
         const provider = new ethers.BrowserProvider(window.ethereum);
         setProvider(provider);
+        
+        // Check if already connected
+        const accounts = await provider.listAccounts();
+        if (accounts.length > 0) {
+          const signer = await provider.getSigner();
+          setSigner(signer);
+          const contract = await PaymentContract.connect(contractAddress, signer);
+          setContract(contract);
+          setIsConnected(true);
+        }
       }
     }
     setupProvider();
-  }, []);
+  }, [contractAddress]);
 
   const connect = async () => {
     if (!provider) return;
