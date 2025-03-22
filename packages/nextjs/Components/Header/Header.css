@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+*, html, body {
+    font-family: 'Press Start 2P', cursive;
+}
+
 .header {
     position: fixed; /* Keep it fixed at the top */
     top: 0;
