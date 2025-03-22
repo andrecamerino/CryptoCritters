@@ -14,7 +14,7 @@ const Footer = () => {
         <Tablet />
       </div>
       <div>
-        <Button label="Play!" href="https://example.com" />
+        <Button label="Play!" href="/Play/play" />
       </div>
     </div>
   );
