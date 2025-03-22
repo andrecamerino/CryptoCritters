@@ -7,8 +7,8 @@
     z-index: 999;
     display: flex; /* Flexbox for centering */
     justify-content: space-between;
-    align-items: center;
-    padding: 0 2rem;
+    align-items: flex-start; /* Changed from center to flex-start */
+    padding: 2rem 2rem 0 2rem; /* Added top padding */
 }
 
 .logo-section {
@@ -19,6 +19,10 @@
 
 .wallet-section {
     margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; /* Increased gap */
+    margin-top: 1rem; /* Added top margin */
 }
 
 .header img {
@@ -130,4 +134,29 @@
     top: 0;
     border-left: 6px solid black;
     border-right: 6px solid black;
+}
+
+.coin-counter {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #f8f9fa;
+    padding: 1rem 1.0rem; /* Increased padding */
+    border-radius: 0.5rem;
+    border: 1px solid #dee2e6;
+    font-family: 'Press Start 2P', cursive;
+    margin-top: 0.5rem; /* Added top margin */
+}
+
+.coin-icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    margin-right: 0.5rem;
+}
+
+.coin-amount {
+    font-size: 1.2rem;
+    color: #212529;
+    font-weight: bold;
 }

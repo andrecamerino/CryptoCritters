@@ -6,6 +6,7 @@ import "./Header.css";
 const Header = () => {
   const { signer, isConnected, connect } = usePaymentContract("0x5FbDB2315678afecb367f032d93F642f64180aa3");
   const [address, setAddress] = useState<string>('');
+  const [coinBalance, setCoinBalance] = useState<number>(0);
 
   useEffect(() => {
     if (signer) {
@@ -18,6 +19,16 @@ const Header = () => {
   return (
     <div className="header">
       <div className="wallet-section">
+        <div className="coin-counter">
+          <Image 
+            src="/coin_images/single_coin.png"
+            alt="Coin"
+            width={40}
+            height={40}
+            className="coin-icon"
+          />
+          <span className="coin-amount">{coinBalance}</span>
+        </div>
         {isConnected ? (
           <div className="wallet-info">
             <div className="wallet-address">{formattedAddress}</div>
