@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./tablet.css";
 
 const Popup: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,15 +20,16 @@ const Popup: React.FC = () => {
   ];
 
   return (
-    <div>
-      {/* Button to open main popup */}
-      <button
-        className="bg-[url('/wood.jpg')] bg-cover bg-no-repeat text-white px-4 py-2 rounded"
-        style={{ imageRendering: "pixelated" }}
-        onClick={() => setIsOpen(true)}
-      >
-        Critterdex
-      </button>
+    <div className="button-container">
+      {/* Button to open main popup - Hidden when popup is open */}
+      {!isOpen && (
+        <button
+          className="critterdex-button"
+          onClick={() => setIsOpen(true)}
+        >
+          Critterdex
+        </button>
+      )}
 
       {/* Main Popup with Image Gallery */}
       {isOpen && (
