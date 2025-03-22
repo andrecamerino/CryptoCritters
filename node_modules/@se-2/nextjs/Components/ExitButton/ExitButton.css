@@ -25,7 +25,7 @@
   width: 100px;
   /* Set a fixed width */
   padding: 10px;
-  border-radius: 10px;
+  /* border-radius: 10px; */
   /* Optional: Add rounded corners */
   box-sizing: border-box;
   /* Include padding in the button's dimensions */

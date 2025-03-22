@@ -56,7 +56,7 @@ const Header = () => {
         <Image 
           src="/logo.png"
           alt="Logo"
-          width={100}
+          width={130}
           height={100}
           className="header-image"
         />

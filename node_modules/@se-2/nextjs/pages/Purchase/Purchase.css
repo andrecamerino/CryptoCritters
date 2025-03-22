@@ -44,10 +44,11 @@ body {
   }
   
   .coin-option {
+    border: 7px solid #000; /* Add a pixel-like border */
     background: white;
-    border-radius: 1rem;
+    /* border-radius: 1rem; */
     padding: 1.5rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
     cursor: pointer;
     transition: transform 0.2s;
     width: 200px;
